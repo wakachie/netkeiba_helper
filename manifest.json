@@ -1,0 +1,14 @@
+{
+	"name": "netkeibaヘルパー",
+	"manifest_version": 3,
+	"version": "0.1.1",
+	"description": "netkeiba.comの表示を快適にする",
+	"content_scripts": [
+		{
+			"matches": ["https://*.netkeiba.com/*"],
+			"js": ["netkeiba.js"],
+			"run_at": "document_start",
+			"all_frames": true
+		}
+	]
+}
