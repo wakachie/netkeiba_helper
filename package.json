@@ -1,0 +1,14 @@
+{
+  "name": "netkeiba-extender",
+  "version": "1.0.0",
+  "description": "�C���X�g�[���菇\r 1. chrome-extension�ȉ��̃t�@�C����K���ȂƂ���ɃR�s�[����\r 2. Chrome�̃��j���[����u���̑��̃c�[���v�ˁu�g���@�\\�v��I������\r 3. �u�p�b�P�[�W������Ă��Ȃ��g���@�\\��ǂݍ��ށv���N���b�N����\r 4. �t�@�C���I���_�C�A���O���o�Ă���̂ŁA1.�ŃR�s�[����chrome-extension��I������",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.6.1"
+  }
+}

@@ -1,13 +1,33 @@
 {
-	"name": "netkeibaヘルパー",
+	"name": "netkeiba extender",
 	"manifest_version": 3,
 	"version": "0.1.1",
-	"description": "netkeiba.comの表示を快適にする",
+	"description": "netkeiba.comの表示を拡張する",
+	"permissions": [
+		"activeTab",
+		"contextMenus",
+		"scripting",
+		"tabs"
+	],
+	"background": {
+		"service_worker": "exnetkeiba_background.js",
+		"type": "module"
+	},
+	"host_permissions": [
+			"https://*/*"
+	],
 	"content_scripts": [
 		{
 			"matches": ["https://*.netkeiba.com/*"],
-			"js": ["netkeiba.js"],
 			"run_at": "document_start",
+			"js": ["js/exnetkeiba_transferURL.js"],
+			"all_frames": true
+		},
+		{
+			"matches": ["https://*.netkeiba.com/*"],
+			"run_at": "document_end",
+			"js": ["jquery/jquery-3.6.4.min.js", "jquery/exnetkeiba-jquery-ui.min.js", "js/exnetkeiba_content.js", "js/exnetkeiba_dialog.js"],
+			"css": ["jquery/exnetkeiba-jquery-ui.min.css"],
 			"all_frames": true
 		}
 	]

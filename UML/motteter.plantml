@@ -1,0 +1,21 @@
+@startuml
+title テスト用クラス図
+skinparam dpi 150
+
+'クラスMotteter
+class Motteter {
+    +String hoge
+    void method1()
+}
+note right of Motteter {
+    これが基本のクラス
+}
+
+'クラスOneNote
+class OneNote {
+    String cors_origin()
+}
+
+' クラス間の関係
+OneNote <|-- Motteter : 参照
+@enduml
